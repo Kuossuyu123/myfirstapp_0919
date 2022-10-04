@@ -1,7 +1,34 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  //建立appTitle和hiFlutter物件
+  var appTitle=Text('我的第一個Flutter App'),
+      hiFlutter=Text(
+        'Hi,Flutter.\n今天是20220926',
+        style:TextStyle(fontSize:30,
+          color:Colors.red,
+            decoration:TextDecoration.underline,
+            fontWeight:FontWeight.bold
+        ),//字體大小
+      );
+  //建立appBody物件
+  var img=Image.network("https://www.niusnews.com/upload/posts/po5_26908_1414062839.jpg");
+  var appBody=Center( //字中
+    child:img,
+  );
+  //建立appBar物件
+  var appBar=AppBar(
+    title:appTitle,
+    backgroundColor: Color(0xff0000ff),//藍色
+  );
+  //建立MaterialApp物件
+  var app=MaterialApp(
+    home:Scaffold(
+      appBar:appBar,
+      body:appBody,
+        backgroundColor: Colors.yellow),
+  );
+  runApp(app);
 }
 
 class MyApp extends StatelessWidget {
