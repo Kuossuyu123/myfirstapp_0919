@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   //建立appTitle和hiFlutter物件
-  var appTitle=Text('Flutter App'),
+  var appTitle=Text('我的第一個Flutter App'),
       hiFlutter=Text(
         'Hi,Flutter.\n今天是20220926',
         style:TextStyle(fontSize:30,
@@ -12,15 +12,51 @@ void main() {
         ),//字體大小
       );
   //建立appBody物件
-  //var img=Image.network("https://www.niusnews.com/upload/posts/po5_26908_1414062839.jpg");
-  var text1=const Text(' 物件1',style:TextStyle(fontSize:10),);
-  var text2=const Text(' 物件2',style:TextStyle(fontSize:20),);
-  var text3=const Text(' 物件3',style:TextStyle(fontSize:30),);
+  // var img=Image.network("https://www.niusnews.com/upload/posts/po5_26908_1414062839.jpg");
+
+ var  gridview=GridView.count(
+  primary:false,
+  padding:const EdgeInsets.all(20),
+  crossAxisSpacing: 10,
+  mainAxisSpacing: 10,
+  crossAxisCount: 2,
+  children:<Widget>[
+  Container(
+  padding:const EdgeInsets.all(8),
+  color: Colors.teal[100],
+  child: const Text("He'd have you all unravel at the"),
+  ),
+  Container(
+  padding: const EdgeInsets.all(8),
+  color: Colors.teal[200],
+  child: const Text('Heed not the rabble'),
+  ),
+  Container(
+  padding: const EdgeInsets.all(8),
+  color: Colors.teal[300],
+  child: const Text('Sound of screams but the'),
+  ),
+  Container(
+  padding: const EdgeInsets.all(8),
+  color: Colors.teal[400],
+  child: const Text('Who scream'),
+  ),
+  Container(
+  padding: const EdgeInsets.all(8),
+  color: Colors.teal[500],
+  child: const Text('Revolution is coming...'),
+  ),
+  Container(
+  padding: const EdgeInsets.all(8),
+  color: Colors.teal[600],
+  child: const Text('Revolution, they...'),
+  ),
+  ],
+  );
+
+
   var appBody=Container( //字中
-    child:Column(
-        children:<Widget>[text1,text2,text3],
-      mainAxisAlignment:MainAxisAlignment.center ,
-          ),
+     child:gridview,
   );
   //建立appBar物件
   var appBar=AppBar(
@@ -32,7 +68,7 @@ void main() {
     home:Scaffold(
       appBar:appBar,
       body:appBody,
-        backgroundColor: Colors.white),
+        backgroundColor: Colors.yellow),
   );
   runApp(app);
 }
