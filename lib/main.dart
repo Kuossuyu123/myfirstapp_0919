@@ -12,9 +12,8 @@ void main() {
         ),//字體大小
       );
   //建立appBody物件
-  // var img=Image.network("https://www.niusnews.com/upload/posts/po5_26908_1414062839.jpg");
-
- var  gridview=GridView.count(
+  var  img=Image.network("https://moldura-pop.s3.sa-east-1.amazonaws.com/imagens-proprietarias/99941986-PDZfZBZ5pAV9IdoW69LeycilC8TdpIdK-cropped-3x4-browser.png");
+  var  gridview=GridView.count(
   primary:false,
   padding:const EdgeInsets.all(20),
   crossAxisSpacing: 10,
@@ -24,7 +23,8 @@ void main() {
   Container(
   padding:const EdgeInsets.all(8),
   color: Colors.teal[100],
-  child: const Text("He'd have you all unravel at the"),
+  child: img,
+  //const Text("He'd have you all unravel at the"),
   ),
   Container(
   padding: const EdgeInsets.all(8),
@@ -39,12 +39,12 @@ void main() {
   Container(
   padding: const EdgeInsets.all(8),
   color: Colors.teal[400],
-  child: const Text('Who scream'),
+  child: img,
   ),
   Container(
   padding: const EdgeInsets.all(8),
   color: Colors.teal[500],
-  child: const Text('Revolution is coming...'),
+  child: img,
   ),
   Container(
   padding: const EdgeInsets.all(8),
